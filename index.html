@@ -63,7 +63,7 @@
       top: -50px;
       width: 30px;
       height: 30px;
-      background-image: url('https://static.vecteezy.com/system/resources/thumbnails/021/950/170/small_2x/red-petal-of-roses-isolated-on-a-transparent-background-png.png'); /* Replace with your rose petal image URL */
+      background-image: url('rose petal.png'); /* Replace with your rose petal image URL */
       background-size: cover;
       opacity: 0.8;
       pointer-events: none;
@@ -84,7 +84,7 @@
 <body>
   <div class="container" id="mainContainer">
     <!-- Top image: Replace with your own URL -->
-    <img id="mainImage" src="https://media.istockphoto.com/id/1382401844/photo/ice-cream-cone-with-heart-balloons-coming-out-of-it.jpg?s=612x612&w=0&k=20&c=4dksSnvvHmteJuD5fgbsk4XSrylUR8exVk5uvPa6XlI=" alt="Main Image" />
+    <img id="mainImage" src="ice cream hear.png" alt="Main Image" />
 
     <!-- Main title with fancy font on "Valentines" -->
     <h1>Will you be my <span class="fancy">Valentines?</span></h1>
@@ -127,7 +127,7 @@
         noButton.style.fontSize = '1em';
       } else if (noClickCount >= 4) {
         // Change the main image to a sad pleading image
-        mainImage.src = 'https://media0.giphy.com/media/5hLiSc7v1UC52/source.gif'; // Replace with your sad image URL
+        mainImage.src = 'madface.gif'; // Replace with your sad image URL
         noButton.innerText = 'Still playing games, huh?';
         // Make the button smaller and reposition it randomly
         noButton.style.transform = `scale(${Math.max(0.5, 1 - (noClickCount - 3) * 0.1)})`;
