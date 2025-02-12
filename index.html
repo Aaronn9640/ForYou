@@ -109,17 +109,20 @@
 
       // Update the No button text and style based on the number of clicks
       if (noClickCount === 1) {
-        noButton.innerText = 'Are you sure?';
+        noText.innerText = 'Please?';
+        noButton.innerText = 'No';
       } else if (noClickCount === 2) {
-        noButton.innerText = 'Really sure?';
+        noText.innerText = 'Come on...';
+        noButton.innerText = 'Nah';
       } else if (noClickCount === 3) {
-        noButton.innerText = 'Please?';
+        noText.innerText = 'Ok this is getting repetitive';
+        noButton.innerText = 'No';
         noButton.style.fontSize = '1em';
       } else if (noClickCount >= 4) {
         // Change the main image to a sad pleading image
         mainImage.src = 'madface.gif'; // Replace with your sad image URL
         noButton.innerText = 'No';
-        noText.innerText = 'Quit playin games!';
+        noText.innerText = 'Quit plain these games!';
         
         // Make the button smaller and reposition it randomly
         noButton.style.transform = `scale(${Math.max(0.5, 1 - (noClickCount - 3) * 0.1)})`;
