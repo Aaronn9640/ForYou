@@ -53,10 +53,6 @@
       transition: all 0.3s ease-in-out;
       position: relative;
     }
-    /* Music container styling */
-    #musicContainer {
-      margin: 20px 0;
-    }
     /* Rose petal animation styles */
     .petal {
       position: fixed;
@@ -92,12 +88,6 @@
     <!-- Subtext -->
     <p class="subtext">We can stop playing games for a night</p>
 
-    <!-- Music embed placeholder (YouTube embed) -->
-    <div id="musicContainer">
-      <!-- Replace the src with your YouTube embed link (e.g., https://www.youtube.com/embed/VIDEO_ID?autoplay=1) -->
-      <iframe id="musicFrame" src="https://www.youtube.com/watch?v=3oWk46wDNxU" allow="autoplay; encrypted-media" allowfullscreen style="width:300px; height:169px; border: none;"></iframe>
-    </div>
-
     <!-- Buttons -->
     <div class="buttons">
       <button id="yesButton" onclick="sayYes()">Yes</button>
@@ -128,13 +118,14 @@
       } else if (noClickCount >= 4) {
         // Change the main image to a sad pleading image
         mainImage.src = 'madface.gif'; // Replace with your sad image URL
-        noButton.innerText = 'Still playing games, huh?';
+        noButton.innerText = 'No';
+        noText.innerText = 'Quit playin games!';
+        
         // Make the button smaller and reposition it randomly
         noButton.style.transform = `scale(${Math.max(0.5, 1 - (noClickCount - 3) * 0.1)})`;
         noButton.style.position = 'absolute';
         noButton.style.top = `${Math.random() * 80 + 10}%`;
         noButton.style.left = `${Math.random() * 80 + 10}%`;
-        // Optionally add or update additional text\n        noText.innerText = 'Still playing games, huh?';
       }
     }
 
@@ -148,7 +139,7 @@
       yesContainer.style.padding = '20px';
       yesContainer.innerHTML = `
         <!-- Additional image for the yes response; replace with your own URL -->
-        <img id="yesImage" src="your-yes-image-url-here" alt="Yes Image" style="width:80%; max-width:400px; height:auto; margin-bottom:20px;">
+        <img id="yesImage" src="yes.gif" alt="Yes Image" style="width:80%; max-width:400px; height:auto; margin-bottom:20px;">
         <!-- Congratulatory message -->
         <h1>I knew you couldn't resist me</h1>
       `;
